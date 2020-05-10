@@ -41,6 +41,9 @@
     <Reference Include="DynamicData, Version=6.14.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamicData.6.14.14\lib\net461\DynamicData.dll</HintPath>
     </Reference>
+    <Reference Include="HandyControl, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HandyControls.2.5.2.1\lib\net47\HandyControl.dll</HintPath>
+    </Reference>
     <Reference Include="Pharmacist.Common, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Pharmacist.Common.1.5.15\lib\netstandard2.0\Pharmacist.Common.dll</HintPath>
     </Reference>
@@ -94,6 +97,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helpers\SimpleViewModelViewHost.xaml.cs">
+      <DependentUpon>SimpleViewModelViewHost.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\ComplexUserInterfaceViewModel.cs" />
     <Compile Include="ViewModels\SideMenuViewModel.cs" />
     <Compile Include="ViewModels\SimpleUserInterfaceViewModel.cs" />
@@ -106,6 +112,10 @@
     <Compile Include="Views\SimpleUserInterfaceView.xaml.cs">
       <DependentUpon>SimpleUserInterfaceView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Helpers\SimpleViewModelViewHost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

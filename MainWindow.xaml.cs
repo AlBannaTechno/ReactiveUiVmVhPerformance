@@ -30,7 +30,7 @@ namespace ReactiveUiVmVhPerformance
             IDisposable mainDisposable = null;
             mainDisposable = this.WhenActivated(disposable =>
             {
-                this.Bind(ViewModel, vm => vm.SideMenuViewModel, v => v.SideMenu.ViewModel).DisposeWith(disposable);
+                this.OneWayBind(ViewModel, vm => vm.SideMenuViewModel, v => v.SideMenu.ViewModel).DisposeWith(disposable);
                 this.Bind(ViewModel, vm => vm.BodyContent, v => v.BodyContent.ViewModel).DisposeWith(disposable);
 
                 mainDisposable.DisposeWith(disposable);

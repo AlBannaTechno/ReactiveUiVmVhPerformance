@@ -1,9 +1,12 @@
-﻿<Application x:Class="ReactiveUiVmVhPerformance.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ReactiveUiVmVhPerformance"
+<Application x:Class="ReactiveUiVmVhPerformance.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:ReactiveUiVmVhPerformance"
+             xmlns:reactiveUi="http://reactiveui.net"
              StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+		  <!-- TODO: Just comment next line To See How This UI Will be very fast without handy control-->
+	      <hc:Theme Name="HandyTheme" xmlns:hc="https://handyorg.github.io/handycontrol" />
+      </ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+  </Application.Resources>
 </Application>
