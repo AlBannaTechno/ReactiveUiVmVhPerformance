@@ -1,12 +1,26 @@
-﻿<Window x:Class="ReactiveUiVmVhPerformance.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ReactiveUiVmVhPerformance"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+﻿<reactiveUi:ReactiveWindow x:TypeArguments="local:MainWindowViewModel" x:Class="ReactiveUiVmVhPerformance.MainWindow"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:local="clr-namespace:ReactiveUiVmVhPerformance"
+                           xmlns:reactiveUi="http://reactiveui.net"
+                           mc:Ignorable="d"
+                           Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
-    </Grid>
-</Window>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="180"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+        <reactiveUi:ViewModelViewHost
+	        x:Name="SideMenu"
+            Grid.Column="0"
+	        />
+
+        <reactiveUi:ViewModelViewHost
+	        x:Name="BodyContent"
+            Grid.Column="1"
+        />
+	</Grid>
+</reactiveUi:ReactiveWindow>

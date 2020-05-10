@@ -14,25 +14,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ReactiveUI;
+using ReactiveUiVmVhPerformance.ViewModels;
 
-namespace ReactiveUiVmVhPerformance
+namespace ReactiveUiVmVhPerformance.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SideMenuView.xaml
     /// </summary>
-    public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
+    public partial class SideMenuView : ReactiveUserControl<SideMenuViewModel>
     {
-        public MainWindow()
+        public SideMenuView()
         {
-            ViewModel = new MainWindowViewModel();
-
             InitializeComponent();
+
             IDisposable mainDisposable = null;
             mainDisposable = this.WhenActivated(disposable =>
             {
-                this.Bind(ViewModel, vm => vm.SideMenuViewModel, v => v.SideMenu.ViewModel).DisposeWith(disposable);
-                this.Bind(ViewModel, vm => vm.BodyContent, v => v.BodyContent.ViewModel).DisposeWith(disposable);
-
+                this.BindCommand(ViewModel, vm => vm.ShowSimpleUserInterface, v => v.ShowSimpleUi).DisposeWith(disposable);
+                this.BindCommand(ViewModel, vm => vm.ShowComplexUserInterface, v => v.ShowComplexU).DisposeWith(disposable);
+                this.BindCommand(ViewModel, vm => vm.ShowNothing, v => v.ShowNothing).DisposeWith(disposable);
                 mainDisposable.DisposeWith(disposable);
             });
         }
