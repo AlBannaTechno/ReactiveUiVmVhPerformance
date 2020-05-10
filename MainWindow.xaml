@@ -19,6 +19,9 @@
             Grid.Column="0"
 	        />
 
+		<!-- you can use : reactiveUi:ViewModelViewHost, it is the same result, i just want to simply stop the animation 
+				Don't use SimpleViewModelViewHost in production code
+		-->
 		<helpers:SimpleViewModelViewHost
 	        x:Name="BodyContent"
             Grid.Column="1"
