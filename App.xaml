@@ -4,9 +4,11 @@
   <Application.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
-		  <!-- TODO: Just comment next line To See How This UI Will be very fast without handy control-->
-	      <hc:Theme Name="HandyTheme" xmlns:hc="https://handyorg.github.io/handycontrol" />
-      </ResourceDictionary.MergedDictionaries>
+	      <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+	      <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+	      <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+	      <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
   </Application.Resources>
 </Application>
