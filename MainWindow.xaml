@@ -20,6 +20,7 @@
 
         <reactiveUi:ViewModelViewHost
 	        x:Name="BodyContent"
+            Transition="Fade"
             Grid.Column="1"
         />
 	</Grid>

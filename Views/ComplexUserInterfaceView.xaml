@@ -9,7 +9,29 @@
                                 xmlns:viewModels="clr-namespace:ReactiveUiVmVhPerformance.ViewModels"
                                 mc:Ignorable="d" 
                                 d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <StackPanel HorizontalAlignment="Center">
             <TextBlock>Complex</TextBlock>
-    </Grid>
+
+			<TextBox x:Name="FirstName"></TextBox>
+			<TextBox x:Name="LastName"></TextBox>
+			<TextBox x:Name="Email"></TextBox>
+	    <TextBox x:Name="FirstName1"></TextBox>
+	    <TextBox x:Name="LastName2"></TextBox>
+	    <TextBox x:Name="Email3"></TextBox>
+	    <TextBox x:Name="FirstName4"></TextBox>
+	    <TextBox x:Name="LastName5"></TextBox>
+	    <TextBox x:Name="Email6"></TextBox>
+	    <TextBox x:Name="FirstName7"></TextBox>
+	    <TextBox x:Name="LastName8"></TextBox>
+	    <TextBox x:Name="Email9"></TextBox>
+	    <TextBox x:Name="FirstName10"></TextBox>
+	    <TextBox x:Name="LastName11"></TextBox>
+	    <TextBox x:Name="Email12"></TextBox>
+	    <TextBox x:Name="FirstName13"></TextBox>
+	    <TextBox x:Name="LastName14"></TextBox>
+	    <TextBox x:Name="Email15"></TextBox>
+	    <TextBox x:Name="FirstName16"></TextBox>
+	    <TextBox x:Name="LastName17"></TextBox>
+	    <TextBox x:Name="Email18"></TextBox>
+	</StackPanel>
 </reactiveUi:ReactiveUserControl>
